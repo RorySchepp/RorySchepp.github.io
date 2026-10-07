@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rory Schepp</title>
+<meta name="description" content="Rory Schepp is a mathematics graduate student at Dalhousie University in Halifax, working on group theory and quantum computing.">
+<meta property="og:title" content="Rory Schepp">
+<meta property="og:description" content="Rory Schepp is a mathematics graduate student at Dalhousie University in Halifax, working on group theory and quantum computing.">
+<meta property="og:url" content="https://schepp.ca/">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="https://schepp.ca/">
+<meta property="og:image" content="https://schepp.ca/images/rory.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23C0ECE2'/><text x='16' y='23' font-size='20' text-anchor='middle' font-family='Georgia,serif' fill='%233A2A2D'>R</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column; each section is a row with its label in a narrow left column, stacking on phones.
+   Single deliberate light theme built from the five supplied colours. */
+:root {
+  color-scheme: light;
+  --paper: #F6ECDF;     /* page ground */
+  --butter: #F4E1B0;    /* highlights */
+  --peach: #F6D2AB;     /* hover / chips */
+  --rose: #D7B1A7;      /* rules, borders */
+  --mint: #C0ECE2;      /* accent panel */
+  --ink: #3A2A2D;       /* text, derived deep plum-brown */
+  --ink-soft: #6B5552;
+  --display: "Young Serif", Georgia, "Times New Roman", serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.wrap { max-width: 64rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 0 4rem; }
+a { color: var(--ink); text-decoration-color: var(--rose); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a:hover { background: var(--butter); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+
+/* top bar */
+.bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 1.5rem; padding-block: 1.25rem; border-bottom: 1px solid var(--rose); font-family: var(--mono); font-size: .8rem; letter-spacing: .04em; }
+.bar nav { display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
+.bar nav a { text-decoration: none; color: var(--ink-soft); }
+.bar nav a:hover { color: var(--ink); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 16rem); gap: 2.5rem; align-items: center; padding-block: 3.5rem 3rem; }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 1; margin: 0 0 1.25rem; letter-spacing: -.01em; }
+.lede { font-size: 1.2rem; max-width: 34rem; margin: 0 0 1.5rem; text-wrap: pretty; }
+.lede em { font-style: normal; background: linear-gradient(transparent 58%, var(--butter) 58%); }
+.contact { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.pill { font-family: var(--mono); font-size: .85rem; padding: .45rem .8rem; border: 1px solid var(--rose); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; text-decoration: none; }
+.pill:hover { background: var(--peach); }
+.social { margin-top: .6rem; }
+.pill.solid { background: var(--mint); border-color: var(--mint); }
+.pill.solid:hover { background: var(--peach); border-color: var(--peach); }
+
+/* the matrix panel */
+.panel { background: var(--mint); border-radius: 1.25rem; padding: 1.75rem 1.5rem 1.25rem; }
+.mat { display: flex; align-items: center; justify-content: center; gap: .6rem; font-family: var(--display); font-size: clamp(1.4rem, 3.4vw, 1.9rem); }
+.frac { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.1; }
+.frac span:first-child { border-bottom: 2px solid var(--ink); padding: 0 .15em; }
+.brk { display: grid; grid-template-columns: repeat(3, 2.2em); text-align: center; padding: .2em .45em; border-left: 2px solid var(--ink); border-right: 2px solid var(--ink); border-radius: 6px; font-variant-numeric: tabular-nums; }
+.brk span { padding: .12em 0; }
+.cap { font-family: var(--mono); font-size: .75rem; color: var(--ink-soft); margin: 1.25rem 0 0; line-height: 1.5; }
+.cap b { color: var(--ink); font-weight: 500; }
+
+.portrait { margin: 0; width: 100%; max-width: 16rem; justify-self: end; }
+.portrait img, .photos img { display: block; width: 100%; height: auto; border-radius: 1rem; }
+.portrait img { border: 6px solid var(--mint); }
+.bio { display: grid; gap: 1rem; max-width: 40rem; font-size: 1.1rem; }
+.photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; }
+.photos figure { margin: 0; display: grid; gap: .45rem; }
+.photos figcaption { font-family: var(--mono); font-size: .78rem; color: var(--ink-soft); }
+.foot-links { display: flex; gap: 1rem; }
+.foot-links a { color: var(--ink-soft); }
+.blurb { margin: 0; }
+.where a { color: inherit; }
+/* sections */
+section { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1rem 2.5rem; padding-block: 2.25rem; border-top: 1px solid var(--rose); }
+section > h2 { font-family: var(--mono); font-weight: 500; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin: .45rem 0 0; }
+.body { min-width: 0; display: grid; gap: 1.75rem; max-width: 44rem; }
+.body p { margin: 0; }
+.item { display: grid; gap: .35rem; }
+.head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .2rem 1rem; }
+.head h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.25; margin: 0; text-wrap: balance; }
+.when { font-family: var(--mono); font-size: .8rem; color: var(--ink-soft); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.where { color: var(--ink-soft); font-size: .95rem; }
+ul { margin: .25rem 0 0; padding-left: 1.1rem; display: grid; gap: .3rem; }
+li::marker { color: var(--rose); }
+
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 0; }
+.tags li { font-size: .95rem; padding: .35rem .8rem; border-radius: 999px; background: var(--butter); }
+.tags li:nth-child(3n+2) { background: var(--peach); }
+.tags li:nth-child(3n) { background: var(--mint); }
+
+.talk { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; }
+.talk .when { padding-top: .3rem; }
+.talk h3 { font-family: var(--display); font-weight: 400; font-size: 1.15rem; margin: 0 0 .2rem; line-height: 1.3; }
+.badge { display: inline-block; margin-top: .35rem; font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; padding: .2rem .55rem; border-radius: 4px; background: var(--butter); }
+
+.tbl { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; vertical-align: top; padding: .55rem .9rem .55rem 0; border-bottom: 1px solid var(--rose); }
+th { font-family: var(--mono); font-weight: 500; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+td:first-child { white-space: nowrap; font-family: var(--mono); font-size: .82rem; color: var(--ink-soft); padding-top: .7rem; }
+td.amt { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; padding-right: 0; }
+
+footer { border-top: 1px solid var(--rose); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; font-family: var(--mono); font-size: .78rem; color: var(--ink-soft); }
+
+@media (max-width: 480px) { .photos { grid-template-columns: 1fr; } }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; padding-block: 2.25rem 2rem; gap: 2rem; }
+  .portrait { justify-self: start; max-width: 13rem; grid-row: 1; }
+  section { grid-template-columns: 1fr; gap: .9rem; padding-block: 1.75rem; }
+  section > h2 { margin: 0; }
+  .talk { grid-template-columns: 1fr; gap: .2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="bar">
+    <span>schepp.ca</span>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>Rory Schepp</h1>
+      <p class="lede">MSc candidate in Mathematics at Dalhousie University, Halifax.</p>
+      <div class="contact">
+        <button class="pill solid" id="copy-email" type="button">rory@schepp.ca</button>
+        <a class="pill" href="mailto:rory@schepp.ca">Write an email</a>
+      </div>
+    </div>
+    <figure class="portrait"><img src="images/rory.jpg" alt="Rory Schepp"></figure>
+  </div>
+
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="body">
+      <div class="bio">
+        <p>Hi, I'm Rory. I grew up in the suburbs of Halifax, and I like the city enough that I stayed here for university. Math has always been the thing I'm most interested in, so studying it felt like the natural choice.</p>
+        <p>Right now I'm doing my master's at Dalhousie, working on generators and relations for groups of rational orthogonal matrices. Before that I spent a couple of summers on quantum circuits and lattice surgery. Next, I'm hoping to do a PhD.</p>
+        <p>When I'm not doing math, I'm usually with my friends or my three dogs, Lydia, Luna and Mayzee.</p>
+      </div>
+      <div class="photos">
+        <figure><img src="images/dogs.jpg" alt="Lydia, Luna and Mayzee standing together on a lawn" loading="lazy"><figcaption>Lydia, Luna and Mayzee</figcaption></figure>
+        <figure><img src="images/woods.jpg" alt="Rory with one of his dogs in the woods" loading="lazy"><figcaption>Out in the woods</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="body">
+      <div class="item">
+        <div class="head"><h3>Master's thesis: relations for O(&#8474;, n)</h3><span class="when">2025 – present</span></div>
+        <div class="where">Dalhousie University · Supervisor: <a href="https://www.mathstat.dal.ca/~neilr/" target="_blank" rel="noopener">Dr. Neil J. Ross</a></div>
+        <p class="blurb">Understanding a group of matrices through the simple rules its building blocks follow.</p>
+      </div>
+      <div class="item">
+        <div class="head"><h3>ZX-calculus for lattice surgery compilation</h3><span class="when">Summer 2025</span></div>
+        <div class="where">Summer research assistant · Supervisor: Dr. Christopher Dean</div>
+        <p class="blurb">Finding ways to make quantum programs cheaper to run on future error-corrected quantum computers.</p>
+      </div>
+      <div class="item">
+        <div class="head"><h3>Relations for reversible circuits</h3><span class="when">Summer 2024</span></div>
+        <div class="where">Summer research assistant · Co-supervisors: Dr. Dongho Lee and Dr. Christopher Dean</div>
+        <p class="blurb">Looking for the basic rules that tell you when two reversible circuits do the same thing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="body">
+      <div class="item">
+        <div class="head"><h3>MSc, Mathematics</h3><span class="when">2025 – Apr 2027 (expected)</span></div>
+        <div class="where">Dalhousie University · Supervisor: <a href="https://www.mathstat.dal.ca/~neilr/" target="_blank" rel="noopener">Dr. Neil J. Ross</a></div>
+      </div>
+      <div class="item">
+        <div class="head"><h3>BSc (Honours), Mathematics</h3><span class="when">2021 – 2025</span></div>
+        <div class="where">Dalhousie University · Supervisor: Dr. Christopher Dean</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    <div class="body">
+      <div class="talk">
+        <span class="when">Nov 2025</span>
+        <div>
+          <h3>Methods for Improving Compilation of Quantum Circuits to Lattice Surgery</h3>
+          <div class="where">Dalhousie Mathematics and Statistics Graduate Seminar, Halifax</div>
+        </div>
+      </div>
+      <div class="talk">
+        <span class="when">Oct 2025</span>
+        <div>
+          <h3>Methods for Improving Compilation of Quantum Circuits to Lattice Surgery</h3>
+          <div class="where">Science Atlantic Mathematics, Statistics and Computer Science Conference</div>        </div>
+      </div>
+      <div class="talk">
+        <span class="when">Oct 2024</span>
+        <div>
+          <h3>Equivalence Relations on Reversible Circuits</h3>
+          <div class="where">Science Atlantic Mathematics, Statistics and Computer Science Conference</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <div class="body">
+      <div class="item">
+        <div class="head"><h3>Teaching assistant and marker</h3><span class="when">Sept 2025 – present</span></div>
+        <div class="where">Department of Mathematics and Statistics, Dalhousie University</div>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Term</th><th>Course</th></tr></thead>
+          <tbody>
+            <tr><td>Fall 2025, 2026</td><td>MATH 1000, Calculus</td></tr>
+            <tr><td>Fall 2025, 2026</td><td>Mathematics Learning Centre</td></tr>
+            <tr><td>Winter 2026</td><td>MATH 1030, Linear Algebra</td></tr>
+            <tr><td>Winter 2026</td><td>MATH 4116, Cryptography</td></tr>
+            <tr><td>Fall 2025</td><td>MATH 3070, Number Theory</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="service">
+    <h2>Service</h2>
+    <div class="body">
+      <div class="item">
+        <div class="head"><h3>Vice-President Internal</h3><span class="when">Oct 2025 – Oct 2026</span></div>
+        <div class="where">Dalhousie Mathematics and Statistics Graduate Society</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Rory Schepp · Halifax, Nova Scotia</span>
+    <span class="foot-links"><a href="https://ca.linkedin.com/in/rory-schepp-1827b51b5" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/RorySchepp" target="_blank" rel="noopener">GitHub</a><a href="https://www.instagram.com/schepprory/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/schepprory/" target="_blank" rel="noopener">Facebook</a></span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var addr = 'rory@schepp.ca';
+  btn.addEventListener('click', function () {
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = addr; }, 1600); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(btn);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    };
+    try { navigator.clipboard.writeText(addr).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
