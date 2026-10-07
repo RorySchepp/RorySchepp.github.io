@@ -8,4 +8,5 @@ Live at **[schepp.ca](https://schepp.ca)**.
 
 - `index.html` – the whole site: one page with its styles and script included
 - `images/` – photos used on the page
+- `cv.pdf` – my CV, linked from the "CV (PDF)" button on the page
 - `CNAME` – points GitHub Pages at the schepp.ca domain
