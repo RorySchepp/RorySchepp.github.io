@@ -1,0 +1,40 @@
+# Talks, newest first.
+#   date:     shown in the left column
+#   title:    talk title
+#   details:  authors, venue, notes, etc., joined with " · " (Markdown links allowed)
+#   abstract: link to the abstract (optional)
+talks:
+  - date: Nov 2025
+    title: Methods for Improving Compilation of Quantum Circuits to Lattice Surgery
+    details:
+      - Joint with Dr. Christopher Dean
+      - Dalhousie Mathematics and Statistics Graduate Seminar, Halifax, NS
+    abstract: https://msgss-dal.github.io/seminar/talks/2025-11-03-rory-schepp.html
+
+  - date: Oct 2025
+    title: ZX-Spider Packing
+    details:
+      - Joint with Dr. Christopher Dean, who presented
+      - "AMS Special Session on New Horizons for Quantum Error Correction: Categorical Approaches to Topological Codes, AMS Fall Eastern Virtual Sectional Meeting (online)"
+    abstract: https://meetings.ams.org/math/fall2025e/meetingapp.cgi/Paper/56457
+
+  - date: Oct 2025
+    title: Methods for Improving Compilation of Quantum Circuits to Lattice Surgery
+    details:
+      - Joint with Dr. Christopher Dean
+      - Science Atlantic Mathematics, Statistics and Computer Science Conference, Cape Breton University, Sydney, NS
+      - Third place, graduate oral presentations
+    abstract: https://event.fourwaves.com/mscs2025/abstracts/69cd007b-42e2-45d4-99a8-9f5eefaaff3f
+
+  - date: Oct 2024
+    title: Equivalence Relations on Reversible Circuits
+    details:
+      - Science Atlantic Mathematics, Statistics and Computer Science Conference, Acadia University, Wolfville, NS
+    abstract: https://event.fourwaves.com/mscs2024/abstracts/61ff7c32-d49e-4690-aacf-8e988de0c433
+
+# Workshops attended, listed under the talks.
+workshops:
+  - date: Jun 2026
+    title: Foundational Methods in Computer Science (FMCS 2026)
+    details:
+      - St. Francis Xavier University

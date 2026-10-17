@@ -1,0 +1,8 @@
+{%- comment -%} Joins a list of short facts with " · ". Pass details=... and optionally abstract=url {%- endcomment -%}
+{%- capture out -%}
+{%- for d in include.details -%}
+{{ d | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% unless forloop.last %} · {% endunless %}
+{%- endfor -%}
+{%- if include.abstract %}{% if include.details.size > 0 %} · {% endif %}<a href="{{ include.abstract }}">Abstract</a>{% endif -%}
+{%- endcapture -%}
+{%- if out != "" %}<div class="where">{{ out }}</div>{% endif -%}

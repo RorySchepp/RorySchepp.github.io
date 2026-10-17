@@ -1,0 +1,61 @@
+# Your name, contact details, photo and the About section.
+# Text fields accept Markdown, e.g. [link text](https://example.com)
+
+name: Rory Schepp
+domain: schepp.ca
+tagline: MSc candidate in Mathematics at Dalhousie University, Halifax.
+location: Halifax, Nova Scotia
+email: rory@schepp.ca
+cv: cv.pdf
+
+# Used by search engines and link previews
+description: >-
+  Rory Schepp is a mathematics graduate student at Dalhousie University in
+  Halifax, working on group theory and quantum computing.
+
+portrait:
+  src: images/rory.jpg
+  alt: Rory Schepp
+  width: 700
+  height: 817
+
+# About section: one entry per paragraph
+bio:
+  - >-
+    Hi, I'm Rory. I grew up just outside Halifax, and the city has always felt
+    like home, so I stayed for university. Math has always been the thing I'm
+    most interested in, so studying it felt like the natural choice.
+  - >-
+    Right now I'm doing my master's at Dalhousie, working on generators and
+    relations for groups of rational orthogonal matrices. Before that, I spent
+    a couple of summers working on quantum circuits and lattice surgery. Next,
+    I'm hoping to do a PhD.
+  - >-
+    When I'm not doing math, I'm usually with my friends or my three dogs,
+    Lydia, Luna and Mayzee.
+
+# Photos shown under the About text
+photos:
+  - src: images/dogs.jpg
+    alt: Lydia, Luna and Mayzee standing together on a lawn
+    caption: Lydia, Luna and Mayzee
+    width: 900
+    height: 880
+  - src: images/woods.jpg
+    alt: Rory with one of his dogs in the woods
+    caption: Out in the woods
+    width: 900
+    height: 880
+
+# Links in the footer
+social:
+  - name: ORCID
+    url: https://orcid.org/0009-0005-0592-4768
+  - name: LinkedIn
+    url: https://ca.linkedin.com/in/rory-schepp-1827b51b5
+  - name: GitHub
+    url: https://github.com/RorySchepp
+  - name: Instagram
+    url: https://www.instagram.com/schepprory/
+  - name: Facebook
+    url: https://www.facebook.com/schepprory/

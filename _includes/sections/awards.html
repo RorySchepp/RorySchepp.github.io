@@ -1,0 +1,12 @@
+    <div class="body">
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Year</th><th>Award</th></tr></thead>
+          <tbody>
+            {%- for a in site.data.awards %}
+            <tr><td>{{ a.year }}</td><td>{{ a.award }}</td></tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>

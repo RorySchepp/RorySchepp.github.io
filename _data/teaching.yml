@@ -1,0 +1,24 @@
+# Teaching positions, then the courses table underneath.
+
+positions:
+  - title: Teaching assistant and marker
+    when: Sept 2025 – present
+    details:
+      - Department of Mathematics and Statistics, Dalhousie University
+
+courses:
+  - term: Fall 2025, Fall 2026
+    course: MATH 1000, Calculus
+    role: Tutorial leader; problem preparation and quiz grading
+  - term: Fall 2025, Fall 2026
+    course: Mathematics Learning Centre
+    role: Drop-in tutoring for first- and second-year mathematics courses
+  - term: Winter 2026
+    course: MATH 1030, Linear Algebra
+    role: Tutorial leader; quiz grading and exam invigilation
+  - term: Winter 2026
+    course: MATH 4116, Cryptography
+    role: Marker, weekly assignment grading
+  - term: Fall 2025
+    course: MATH 3070, Number Theory
+    role: Marker, weekly assignment grading

@@ -1,0 +1,15 @@
+{%- assign p = site.data.profile -%}
+    <div class="body">
+      <div class="bio">
+        {%- for para in p.bio %}
+        {{ para | markdownify | strip }}
+        {%- endfor %}
+      </div>
+      {%- if p.photos %}
+      <div class="photos">
+        {%- for ph in p.photos %}
+        <figure><img src="{{ ph.src | relative_url }}" width="{{ ph.width }}" height="{{ ph.height }}" alt="{{ ph.alt }}" loading="lazy"><figcaption>{{ ph.caption }}</figcaption></figure>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>

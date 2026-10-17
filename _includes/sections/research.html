@@ -1,0 +1,9 @@
+{%- assign r = site.data.research -%}
+    <div class="body">
+      {%- if r.interests %}
+      <p class="interests"><span class="label">Interests</span> {{ r.interests }}</p>
+      {%- endif %}
+      {%- for item in r.projects %}
+{% include item.html item=item %}
+      {%- endfor %}
+    </div>

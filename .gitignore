@@ -1,0 +1,5 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+_to_delete/
+.DS_Store

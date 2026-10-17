@@ -1,0 +1,10 @@
+# Site-wide settings. Most content lives in the _data/ folder instead.
+url: "https://schepp.ca"
+baseurl: ""
+lang: en
+
+# Files Jekyll should not publish as pages
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

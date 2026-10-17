@@ -1,0 +1,24 @@
+{%- assign t = site.data.talks -%}
+    <div class="body">
+      {%- for talk in t.talks %}
+      <div class="talk">
+        <span class="when">{{ talk.date }}</span>
+        <div>
+          <h3>{{ talk.title }}</h3>
+          {% include details.html details=talk.details abstract=talk.abstract %}
+        </div>
+      </div>
+      {%- endfor %}
+      {%- if t.workshops %}
+      <h3 class="sub">Workshops attended</h3>
+      {%- for w in t.workshops %}
+      <div class="talk">
+        <span class="when">{{ w.date }}</span>
+        <div>
+          <h3>{{ w.title }}</h3>
+          {% include details.html details=w.details %}
+        </div>
+      </div>
+      {%- endfor %}
+      {%- endif %}
+    </div>

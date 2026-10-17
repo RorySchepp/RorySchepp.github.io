@@ -1,0 +1,19 @@
+# Links in the top bar. Each "id" must match a section on the page.
+# Reorder, rename or remove entries here.
+
+- title: About
+  id: about
+- title: Research
+  id: research
+- title: Education
+  id: education
+- title: Talks
+  id: talks
+- title: Awards
+  id: awards
+- title: Teaching
+  id: teaching
+- title: Service
+  id: service
+- title: Skills
+  id: skills

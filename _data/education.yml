@@ -1,0 +1,20 @@
+# Degrees, newest first.
+#   details: short facts, joined with " · " (Markdown links allowed)
+#   points:  bullet points (optional), e.g. thesis title
+
+- title: MSc, Mathematics
+  when: 2025 – present (expected Apr 2027)
+  details:
+    - Dalhousie University
+    - "Supervisor: [Dr. Neil J. Ross](https://www.mathstat.dal.ca/~neilr/)"
+  points:
+    - "Thesis: *Generators and relations for O<sub>n</sub>(ℚ), the group of rational orthogonal matrices*"
+
+- title: BSc (Honours), Mathematics
+  when: 2021 – 2025
+  details:
+    - Dalhousie University
+    - First-class honours
+    - "Supervisors: Dr. Christopher Dean and Dr. Peter Selinger"
+  points:
+    - "Honours thesis: *Methods to Improve Lattice Surgery Compilation*"

@@ -1,0 +1,18 @@
+{%- assign t = site.data.teaching -%}
+    <div class="body">
+      {%- for item in t.positions %}
+{% include item.html item=item %}
+      {%- endfor %}
+      {%- if t.courses %}
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Term</th><th>Course</th><th>Role</th></tr></thead>
+          <tbody>
+            {%- for c in t.courses %}
+            <tr><td>{{ c.term }}</td><td>{{ c.course }}</td><td>{{ c.role }}</td></tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+      {%- endif %}
+    </div>

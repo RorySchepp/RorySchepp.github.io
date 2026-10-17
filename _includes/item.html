@@ -1,0 +1,14 @@
+      <div class="item">
+        <div class="head"><h3>{{ include.item.title }}{% if include.item.status %} <span class="status">{{ include.item.status }}</span>{% endif %}</h3>{% if include.item.when %}<span class="when">{{ include.item.when }}</span>{% endif %}</div>
+        {% include details.html details=include.item.details %}
+        {%- if include.item.blurb %}
+        <p class="blurb">{{ include.item.blurb | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+        {%- endif %}
+        {%- if include.item.points %}
+        <ul>
+          {%- for pt in include.item.points %}
+          <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </div>

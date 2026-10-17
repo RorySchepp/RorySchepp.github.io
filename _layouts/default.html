@@ -1,0 +1,43 @@
+{%- assign p = site.data.profile -%}
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ p.name }}</title>
+<meta name="description" content="{{ p.description | strip }}">
+<meta property="og:title" content="{{ p.name }}">
+<meta property="og:description" content="{{ p.description | strip }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ p.portrait.src | absolute_url }}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23C0ECE2'/><text x='16' y='23' font-size='20' text-anchor='middle' font-family='Georgia,serif' fill='%233A2A2D'>{{ p.name | slice: 0 }}</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="bar">
+    <span>{{ p.domain }}</span>
+    <nav aria-label="Sections">
+      {%- for item in site.data.navigation %}
+      <a href="#{{ item.id }}">{{ item.title }}</a>
+      {%- endfor %}
+    </nav>
+  </header>
+
+{{ content }}
+
+  <footer>
+    <span>{{ p.name }} · {{ p.location }}</span>
+    <span class="foot-links">{% for link in p.social %}<a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}</span>
+  </footer>
+</div>
+
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>
